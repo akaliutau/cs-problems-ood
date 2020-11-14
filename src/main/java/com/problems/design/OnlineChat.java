@@ -1,0 +1,85 @@
+package com.problems.design;
+
+import java.util.List;
+
+public class OnlineChat {
+	
+	enum Status{
+		ONLINE, OFFLINE
+	}
+	
+	class Group {
+		String name;
+	}
+	
+	class User {
+		long id;
+		String username;
+		String fullName;
+		Group group;
+		Status status;
+	}
+
+	
+	class Message {
+		long id;
+		int chatId;
+		User from;
+		User to;
+	}
+	
+	class TextMessage extends Message {
+		String text;
+	}
+
+	class VideoMessage extends Message {
+		Object video;
+	}
+
+	
+	
+	class Conversation {
+		int chatId;
+		String topic;
+	}
+	
+	interface Repository<T> {
+		List<T> find(Criteria<T> criteria);
+		T save(T t);
+	}
+	
+	interface Criteria<T>{
+		
+	}
+	
+	interface Mediator {
+		boolean register(User user);
+		void sendMessage(Message message);
+		List<Message> getMessages(Criteria<Message> criteria);
+	}
+
+	
+	class ChatMediator implements Mediator {
+		
+		Repository<Message> messageRepository;
+
+		@Override
+		public boolean register(User user) {
+			return false;
+		}
+
+		@Override
+		public void sendMessage(Message message) {
+		}
+
+		@Override
+		public List<Message> getMessages(Criteria<Message> criteria) {
+			return null;
+		}
+		
+	}
+	
+	
+	
+
+}
