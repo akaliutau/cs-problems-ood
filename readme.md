@@ -6,9 +6,9 @@ I created this repository with aim to demonstrate the best practices in low-leve
 
 There are many opinions regarding usefulness of these patterns in solving real problems. Sometimes (not always, but sometimes) there makes sense to add extra complexity into system, bearing in mind all future improvements, additions and complexities - it is not easy to make changes, and better of all anticipate and include them into Grand Design from the day zero.
 
-Sometimes following these patterns is not the best that you could do.
+Sometimes following these patterns is not the best that you could do. In fact, to invent a new approach to solve specific use-case is often much better then to try adopting standard one. This is all about trade-offs. If design patterns lead to more complex architecture, follow your own way.
   
-The best approach in this situation could be as follows:
+The best approach in this situation could be as said by one old man long time ago:
 
 <i>The system must be as simple as possible, but not simpler</i> (c) Einstein  
 
@@ -17,7 +17,7 @@ Structure
  
 Package <b>com.design.usecases</b> includes the examples of OOD for different use-cases.
 
-Package <b>com.design.patterns</b> contains implementation of different popular design patterns.
+Package <b>com.design.patterns</b> contains implementation of different popular design patterns (total 27)
 
 
 
