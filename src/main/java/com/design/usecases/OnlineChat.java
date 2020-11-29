@@ -1,11 +1,16 @@
-package com.problems.design;
+package com.design.usecases;
 
+import java.time.Instant;
 import java.util.List;
 
 public class OnlineChat {
 	
 	enum Status{
 		ONLINE, OFFLINE
+	}
+	
+	enum MessageType{
+		TEXT, VIDEO
 	}
 	
 	class Group {
@@ -22,10 +27,11 @@ public class OnlineChat {
 
 	
 	class Message {
-		long id;
+		String id;
 		int chatId;
 		User from;
 		User to;
+		Instant date;
 	}
 	
 	class TextMessage extends Message {
@@ -33,7 +39,7 @@ public class OnlineChat {
 	}
 
 	class VideoMessage extends Message {
-		Object video;
+		String videoURL;
 	}
 
 	
@@ -74,7 +80,7 @@ public class OnlineChat {
 
 		@Override
 		public List<Message> getMessages(Criteria<Message> criteria) {
-			return null;
+			return messageRepository.find(criteria);
 		}
 		
 	}

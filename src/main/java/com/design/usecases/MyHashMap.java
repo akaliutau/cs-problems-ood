@@ -1,4 +1,4 @@
-package com.problems.design;
+package com.design.usecases;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

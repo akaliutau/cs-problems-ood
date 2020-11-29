@@ -1,4 +1,4 @@
-package com.problems.design;
+package com.design.usecases;
 
 import java.util.HashSet;
 import java.util.Random;
@@ -75,7 +75,7 @@ public class Deck {
 		@Override
 		public Card getCard() {
 			int card = haveCards[pos];
-			return new Card(card % totalCards, typesMap[card / 13]);
+			return new Card(card % 13, typesMap[card / 13]);
 		}
 
 		@Override
