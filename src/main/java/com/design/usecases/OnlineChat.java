@@ -4,19 +4,19 @@ import java.time.Instant;
 import java.util.List;
 
 public class OnlineChat {
-	
-	enum Status{
+
+	enum Status {
 		ONLINE, OFFLINE
 	}
-	
-	enum MessageType{
+
+	enum MessageType {
 		TEXT, VIDEO
 	}
-	
+
 	class Group {
 		String name;
 	}
-	
+
 	class User {
 		long id;
 		String username;
@@ -25,7 +25,6 @@ public class OnlineChat {
 		Status status;
 	}
 
-	
 	class Message {
 		String id;
 		int chatId;
@@ -33,7 +32,7 @@ public class OnlineChat {
 		User to;
 		Instant date;
 	}
-	
+
 	class TextMessage extends Message {
 		String text;
 	}
@@ -42,31 +41,31 @@ public class OnlineChat {
 		String videoURL;
 	}
 
-	
-	
 	class Conversation {
 		int chatId;
 		String topic;
 	}
-	
+
 	interface Repository<T> {
 		List<T> find(Criteria<T> criteria);
+
 		T save(T t);
 	}
-	
-	interface Criteria<T>{
-		
+
+	interface Criteria<T> {
+
 	}
-	
+
 	interface Mediator {
 		boolean register(User user);
+
 		void sendMessage(Message message);
+
 		List<Message> getMessages(Criteria<Message> criteria);
 	}
 
-	
 	class ChatMediator implements Mediator {
-		
+
 		Repository<Message> messageRepository;
 
 		@Override
@@ -82,10 +81,7 @@ public class OnlineChat {
 		public List<Message> getMessages(Criteria<Message> criteria) {
 			return messageRepository.find(criteria);
 		}
-		
+
 	}
-	
-	
-	
 
 }

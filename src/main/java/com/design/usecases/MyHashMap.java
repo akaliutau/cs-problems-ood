@@ -18,7 +18,7 @@ public class MyHashMap<K, V> {
 
 	class Bucket {
 		private List<Pair> bucket = new LinkedList<>();
-		
+
 		private Pair find(K key) {
 			for (Pair pair : bucket) {
 				if (pair.key.equals(key))
@@ -36,7 +36,7 @@ public class MyHashMap<K, V> {
 			Pair pair = find(key);
 			if (pair == null) {
 				bucket.add(new Pair(key, value));
-			}else {
+			} else {
 				pair.value = value;
 			}
 		}
