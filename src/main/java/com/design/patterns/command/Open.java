@@ -7,14 +7,8 @@ package com.design.patterns.command;
 
 public class Open implements Command {
 	
-	private Receiver receiver;
-	
-	public Open(Receiver receiver) {
-		this.receiver = receiver;
-	}
-
 	@Override
-	public void exec() {
+	public void exec(Receiver receiver) {
 		System.out.println("performing open operation on receiver: " + receiver);
 	}
 

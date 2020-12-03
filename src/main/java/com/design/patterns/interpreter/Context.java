@@ -17,7 +17,7 @@ public class Context {
 		stack.add(arg1 + arg2);
 	}
 
-	public void add(int num) {
+	public void addArgument(int num) {
 		stack.add(num);
 	}
 }

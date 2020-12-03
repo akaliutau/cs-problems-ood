@@ -3,6 +3,10 @@ package com.design.patterns.memento;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * This class serves as a guardian
+ * @author akalu
+ */
 public class Caretaker {
 	private Queue<Memento> history = new LinkedList<>();
 	

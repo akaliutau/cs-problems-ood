@@ -1,16 +1,16 @@
 package com.design.patterns.specification;
 
-public class SizeSelector extends Selector<Dragon>{
-	
-	private int size;
+public class SizeSelector extends Selector<Dragon> {
 
-	public SizeSelector(int size) {
-		this.size = size;
-	}
+    private int size;
 
-	@Override
-	public boolean test(Dragon t) {
-		return t.size() > size;
-	}
+    public SizeSelector(int size) {
+        this.size = size;
+    }
+
+    @Override
+    public boolean test(Dragon t) {
+        return t.size() > size;
+    }
 
 }

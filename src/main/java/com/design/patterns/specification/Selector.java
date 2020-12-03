@@ -1,24 +1,17 @@
 package com.design.patterns.specification;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.function.Predicate;
 
 public abstract class Selector<T> implements Predicate<T> {
-	private List<Selector<T>> selectors = new ArrayList<>();
+    public Selector<T> and(Selector<T> other) {
+        return new ConjunctionSelector<>(this, other);
+    }
 
-	@Override
-	public boolean test(T t) {
-		for (Selector<T> select : selectors) {
-			if (!select.test(t)) {
-				return false;
-			}
-		}
-		return true;
-	}
-	
-	public Selector<T> and(Selector<T> other) {
-		selectors.add(other);
-		return this;
-	}
+    public Selector<T> or(Selector<T> other) {
+        return new DisjunctionSelector<>(this, other);
+    }
+
+    public Selector<T> not() {
+        return new NegationSelector<>(this);
+    }
 }

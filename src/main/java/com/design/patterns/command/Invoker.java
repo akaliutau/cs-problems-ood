@@ -6,13 +6,13 @@ package com.design.patterns.command;
  * @author akalu
  */
 public class Invoker {
-	private Command command;
+	private Command command;// can be a list of Commands
 
 	public void setCommand(Command command) {
 		this.command = command;
 	}
 	
 	public void invoke() {
-		command.exec();
+		command.exec(new Receiver());
 	}
 }

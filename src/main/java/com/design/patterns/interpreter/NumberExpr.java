@@ -9,7 +9,7 @@ public class NumberExpr implements Expression {
 
 	@Override
 	public void eval(Context context) {
-		context.add(num);
+		context.addArgument(num);
 	}
 
 }

@@ -7,14 +7,8 @@ package com.design.patterns.command;
 
 public class Close implements Command {
 	
-	private Receiver receiver;
-	
-	public Close(Receiver receiver) {
-		this.receiver = receiver;
-	}
-
 	@Override
-	public void exec() {
+	public void exec(Receiver receiver) {
 		System.out.println("performing close operation on receiver: " + receiver);
 	}
 

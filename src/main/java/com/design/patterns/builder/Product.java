@@ -5,10 +5,6 @@ public class Product {
 	private String color;
 	private int wheels;
 
-	public void show() {
-		System.out.println(this);
-	}
-
 	public void setColor(String color) {
 		this.color = color;
 	}
