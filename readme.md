@@ -10,7 +10,7 @@ Sometimes following these patterns is not the best that you could do. In fact, t
   
 The best approach in this situation could be as said by one old man long time ago:
 
-<i>The system must be as simple as possible, but not simpler</i> (c) Einstein  
+<i>Everything should be made as simple as possible, but no simpler.</i> (c) Einstein  
 
 Structure
 ========== 
@@ -49,6 +49,5 @@ strategy <p/>
 template <p/>
 visitor <p/>
 
-
-
+This repository does not include architectural patterns and programming idioms.
 
