@@ -6,7 +6,7 @@ import java.util.UUID;
  * This class is served as an aggregate one, which combines the information
  * about what to deliver Usually has its own id used for reference
  * 
- * @author akalu
+ * @author akaliutau
  */
 public class Order {
 

@@ -4,7 +4,7 @@ package com.design.patterns.memento;
  * The system play the role of state machine
  * This class must implement the inner mechanism of saving/restoring the state
  * 
- * @author akalu
+ * @author akaliutau
  *
  */
 public class Originator {

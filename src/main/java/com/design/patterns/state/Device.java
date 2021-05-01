@@ -4,7 +4,7 @@ package com.design.patterns.state;
  * Driver class
  * Note that state is changed only if there is an actual need in transition, f.e. on -> off, etc
  * 
- * @author akalu
+ * @author akaliutau
  *
  */
 public class Device {

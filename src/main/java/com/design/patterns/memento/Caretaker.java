@@ -5,7 +5,7 @@ import java.util.Queue;
 
 /**
  * This class serves as a guardian
- * @author akalu
+ * @author akaliutau
  */
 public class Caretaker {
 	private Queue<Memento> history = new LinkedList<>();

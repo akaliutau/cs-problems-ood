@@ -3,7 +3,7 @@ package com.design.patterns.command;
 /**
  * Invoking object
  * 
- * @author akalu
+ * @author akaliutau
  */
 public class Invoker {
 	private Command command;// can be a list of Commands

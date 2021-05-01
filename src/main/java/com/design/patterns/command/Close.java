@@ -2,7 +2,7 @@ package com.design.patterns.command;
 
 /**
  * Represents the object which actually performs the operation
- * @author akalu
+ * @author akaliutau
  */
 
 public class Close implements Command {

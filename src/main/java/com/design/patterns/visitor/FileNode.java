@@ -4,7 +4,7 @@ package com.design.patterns.visitor;
  * Represent state of some object, not actions The latter are handled by Visitor
  * object
  * 
- * @author akalu
+ * @author akaliutau
  *
  */
 public class FileNode implements Visitable {
